@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" href="css/form.css"> -->
+</head>
+<body>
+	<div data-role="page" id="home"> 
+    <div data-role="content">
+        <p>
+            </p><ul data-role="listview" data-inset="true" data-theme="c">
+                <li id="listitem">Swipe Right to view Page 1</li>
+            </ul>
+        <p></p>
+    </div>
+</div>
+ 
+<div data-role="page" id="page1"> 
+    <div data-role="content">
+         
+        <ul data-role="listview" data-inset="true" data-theme="c">
+            <li data-role="list-divider">Navigation</li> 
+            <li><a href="#home">Back to the Home Page</a></li>
+        </ul>
+         
+        <p>
+            Yeah!
+			You Swiped Right to view Page 1
+        </p>
+    </div>
+</div>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+	// If you swipe your page right you screen will be filled by page1 content.
+$("#listitem").swiperight(function() {
+    $.mobile.changePage("#page1");
+});
+ 
+// If you swipe your page right you screen will be filled by page1 content.
+$("#listitem").swipeleft(function() {
+    $.mobile.changePage("#page2");
+});
+</script>
+</body>
+</html>
